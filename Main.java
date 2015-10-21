@@ -18,7 +18,6 @@ public class Main {
                 ficaTax = PayrollUtils.askInput("FICA Tax");
             } while(PayrollUtils.validate(gPay,fTax,sTax,ficaTax));
             employee[counter] = new Employee(eNum,gPay,fTax,sTax,ficaTax);
-            nPay = employee[counter] = getNetPay;
             counter++;
         }
     }
