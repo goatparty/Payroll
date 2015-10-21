@@ -41,4 +41,28 @@ public class Employee {
     public int getENum() {
         return eNum;
     }
+
+    public double getGPay() {
+        return gPay;
+    }
+
+    public double getFTax() {
+        return fTax;
+    }
+
+    public double getSTax() {
+        return sTax;
+    }
+
+    public double getFicaTax() {
+        retirm ficaTax;
+    }
+
+    public double getNPay() {
+        return gPay - fTax - sTax - ficaTax;
+    }
+
+    public void output() {
+        //TODO: Output
+    }
 }
