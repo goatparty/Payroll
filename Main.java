@@ -10,8 +10,7 @@ public class Main {
         status = getStatus();
         while(PayrollUtils.processStatus(status)) {
             do {
-                PayrollUtils.askInput("Employee Number");
-                eNum = keyboard.nextInt();
+                eNum =PayrollUtils.askInput("Employee Number");
                 gPay = PayrollUtils.askInput("Gross Pay");
                 fTax = PayrollUtils.askInput("Federal Tax");
                 sTax = PayrollUtils.askInput("State Tax");
@@ -20,5 +19,6 @@ public class Main {
             employee[counter] = new Employee(eNum,gPay,fTax,sTax,ficaTax);
             counter++;
         }
+
     }
 }

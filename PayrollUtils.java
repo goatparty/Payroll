@@ -5,6 +5,14 @@ public static class PayrollUtils {
         Scanner keyboard = new Scanner(System.in);
         return keyboard.nextDouble();
     }
+
+    public static int askInput(String questionType,boolean bin) {
+        questionType = questionType.trim();
+        System.out.print("Please enter " + questionType + ": ");
+        Scanner keyboard = new Scanner(System.in);
+        return keyboard.nextInt();
+    }
+
     public static char getStatus() {
         System.out.print("Please enter q to quit or anything else to continue: ");
         String statusString = keyboard.nextLine();
