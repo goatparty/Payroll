@@ -18,6 +18,7 @@ public class Main {
             } while(PayrollUtils.validate(gPay,fTax,sTax,ficaTax));
             employee[counter] = new Employee(eNum,gPay,fTax,sTax,ficaTax);
             counter++;
+             PayrollFile.EmployeeOutput.outputEmployee(employee[counter]);
         }
 
     }
