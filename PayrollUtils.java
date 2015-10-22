@@ -1,4 +1,5 @@
 public static class PayrollUtils {
+
     public static double askInput(String questionType) {
         questionType = questionType.trim();
         System.out.print("Please enter " + questionType + ": ");
