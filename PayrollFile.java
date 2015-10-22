@@ -2,13 +2,26 @@ public class PayrollFile {
 
     public class EmployeeInput {
         public static Employee(int number) {
-            String bin
+            String bin;
             int eNum;
             double gPay,fTax,sTax,ficaTax,nPay;
             Employee employee;
             File file = new File("Employee" + number + ".emp")
             Scanner read = new Scanner(file);
 
+            bin = read.nextLine;
+            eNum = Integer.parseInt(bin);
+            bin = read.nextLine;
+            gPay = Double.parseDouble(bin);
+            bin = read.nextLine;
+            fTax = Double.parseDouble(bin);
+            bin = read.nextLine;
+            sTax = Double.parseDouble(bin);
+            bin = read.nextLine;
+            ficaTax = Double.parseDouble(bin);
+
+            employee = new Employee(eNum,gPay,fTax,sTax,ficaTax);
+            return employee;
         }
 
     }
