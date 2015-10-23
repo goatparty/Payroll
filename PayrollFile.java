@@ -63,4 +63,15 @@ public class PayrollFile {
             }
         }
     }
+
+    public class totalEmployee {
+        static double gPay, fTax, sTax, ficaTax, netPay;
+        public void total(Employee employee) {
+            gPay += employee.getGPay();
+            fTax += employee.getFTax();
+            sTax += employee.getSTax();
+            ficaTax += employee.getFicaTax();
+            netPay += employee.getNPay();
+        }
+    }
 }
