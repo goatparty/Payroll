@@ -1,3 +1,5 @@
+import java.util.*;
+import java.io.*;
 public class Employee {
     private int eNum;
     private double gPay,fTax,sTax,ficaTax;
@@ -55,7 +57,7 @@ public class Employee {
     }
 
     public double getFicaTax() {
-        retirm ficaTax;
+        return ficaTax;
     }
 
     public double getNPay() {
