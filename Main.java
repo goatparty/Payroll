@@ -24,7 +24,7 @@ public class Main {
 
             employee[counter] = new Employee(eNum,gPay,fTax,sTax,ficaTax);
             counter++;
-            payrollFile.outputEmployee(employee[counter]);
+            payrollFile.outputEmployee(eNum,gPay,fTax,sTax,ficaTax);
             status = payrollUtils.getStatus();
         }
         int saveNum1 = payrollUtils.askInput("Enter first save to total",true);
