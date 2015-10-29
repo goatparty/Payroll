@@ -1,14 +1,15 @@
 import java.util.*;
 import java.io.*;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner keyboard = new Scanner(System.in);
-        Employee employee[];
+        Employee[] employee = new Employee[1000000];
         int eNum,counter = 0;
         double gPay,fTax,sTax,ficaTax,nPay;
         PayrollUtils payrollUtils = new PayrollUtils();
-
+        PayrollFile payrollFile = new PayrollFile();
         char status = payrollUtils.getStatus();
+
         while(payrollUtils.processStatus(status)) {
             do {
                 eNum = payrollUtils.askInput("Employee Number",true);
@@ -20,15 +21,16 @@ public class Main {
                     payrollUtils.errorMessage("Tax Greater Than Gross Pay, Please Try Again");
                 }
             } while(payrollUtils.validate(gPay,fTax,sTax,ficaTax));
+
             employee[counter] = new Employee(eNum,gPay,fTax,sTax,ficaTax);
             counter++;
-            PayrollFile.outputEmployee(employee[counter]);
+            payrollFile.outputEmployee(employee[counter]);
             status = payrollUtils.getStatus();
         }
         int saveNum1 = payrollUtils.askInput("Enter first save to total",true);
         int saveNum2 = payrollUtils.askInput("Enter last save to total",true);
-        for (int x = saveNum1; x < saveNum2; x++) {
+        //for (int x = saveNum1; x < saveNum2; x++) {
 
-        }
+        //}
     }
 }

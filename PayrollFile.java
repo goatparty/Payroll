@@ -3,7 +3,7 @@ import java.io.*;
 public class PayrollFile {
 private static double gPay, fTax, sTax, ficaTax, netPay;
 
-        public void Employee(int number) {
+        public void Employee(int number) throws IOException {
             String bin;
             int eNum1;
             double gPay1,fTax1,sTax1,ficaTax1,nPay1;
@@ -29,7 +29,7 @@ private static double gPay, fTax, sTax, ficaTax, netPay;
 
 
 
-        public void outputEmployee(Employee employee) {
+        public void outputEmployee(Employee employee) throws IOException {
             int numSave = getNumSave() + 1;
             String userFileName = "Employee" + numSave + ".emp";
             FileWriter 	fWriter = new FileWriter(userFileName, true);
@@ -41,13 +41,10 @@ private static double gPay, fTax, sTax, ficaTax, netPay;
             pWriter.println(employee.getFicaTax());
             pWriter.close();
         }
-
-
-
         /**
         *   Searches and gets number of saves
         */
-        public int getNumSave() {
+        public int getNumSave() throws IOException {
             int counter = 0;
             File file;
             boolean foundLast = false;
@@ -63,11 +60,9 @@ private static double gPay, fTax, sTax, ficaTax, netPay;
                     return counter;
                 }
             }
+            return counter;
         }
-
-
-
-        public void total(Employee employee) {
+        public void total(Employee employee) throws IOException {
             gPay += employee.getGPay();
             fTax += employee.getFTax();
             sTax += employee.getSTax();
