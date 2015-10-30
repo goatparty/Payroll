@@ -1,15 +1,52 @@
 import java.io.*;
 import java.util.*;
 public class TotalPayroll {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        double gPay,fTax,sTax,ficaTax,nPay,total;
         int numLines = 1
+        File file2 = new File("Employee1.emp");
+        Scanner read2 = new Scanner(file2);
         File file = new File("Employee1.emp");
         Scanner read = new Scanner(file);
+        Scanner keyboard = new Scanner(System.in);
         while (read.hasNext()) {
             read.nextLine();
             numLines++;
         }
         System.out.println("Save has " + numLines ". Type reset to clear file or anything else to total");
+        String input = keyboard.nextLine();
+        input = input.toLowerCase();
+        if (input.equals("reset")) {
+            file.delete();
+        }
+        else {
+            System.out.println("Starting Data Totals")
+            while(read2.hasNext()) {
+                for (int x = 0; x < 5; x++) {
+                    double gPayT,fTaxT,sTaxT,ficaTaxT,totalPay;
+                    String bin;
+                    bin = read2.nextLine();
+                    int employeeNumber = Integer.parseInt(bin);
+                    System.out.println("Totaling Employee with #: " + employeeNumber);
+                    bin = read2.nextLine();
+                    gPayT = Double.parseDouble(bin);
+                    bin = read2.nextLine();
+                    fTaxT = Double.parseDouble(bin);
+                    bin = read2.nextLine();
+                    sTaxT = Double.parseDouble(bin);
+                    bin = read2.nextLine();
+                    ficaTaxT = Double.parseDouble(bin);
+                    totalPay = gPayT + fTaxT + sTaxT + ficaTaxT;
+                    gPay += gPayT;
+                    fTax += fTaxT;
+                    sTax += sTaxT;
+                    ficaTax += ficaTaxT;
+                    total += total;
 
+
+                }
+            }
+
+        }
     }
 }

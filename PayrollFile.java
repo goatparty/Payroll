@@ -27,7 +27,7 @@ private double gPay2,fTax2,sTax2,ficaTax2;
             employee = new Employee(eNum1,gPay1,fTax1,sTax1,ficaTax1);
 
         }
-
+*/
 
 
 
@@ -48,7 +48,7 @@ private double gPay2,fTax2,sTax2,ficaTax2;
             pWriter.println(ficaTax2);
             pWriter.close();
         }
-        */
+
         /**
         *   Searches and gets number of saves
         */
