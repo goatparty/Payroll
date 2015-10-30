@@ -27,10 +27,5 @@ public class Main {
             payrollFile.outputEmployee(eNum,gPay,fTax,sTax,ficaTax);
             status = payrollUtils.getStatus();
         }
-        int saveNum1 = payrollUtils.askInput("Enter first save to total",true);
-        int saveNum2 = payrollUtils.askInput("Enter last save to total",true);
-        //for (int x = saveNum1; x < saveNum2; x++) {
-
-        //}
     }
 }

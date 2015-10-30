@@ -1,11 +1,11 @@
 import java.util.*;
 import java.io.*;
 public class PayrollFile {
-private static double gPay, fTax, sTax, ficaTax, netPay;
+
 private int eNum2;
 private double gPay2,fTax2,sTax2,ficaTax2;
 
-        public void Employee(int number) throws IOException {
+        /**public void Employee(int number) throws IOException {
             String bin;
             int eNum1;
             double gPay1,fTax1,sTax1,ficaTax1,nPay1;
@@ -48,6 +48,7 @@ private double gPay2,fTax2,sTax2,ficaTax2;
             pWriter.println(ficaTax2);
             pWriter.close();
         }
+        */
         /**
         *   Searches and gets number of saves
         */
@@ -69,12 +70,4 @@ private double gPay2,fTax2,sTax2,ficaTax2;
             }
             return counter;
         }
-        public void total(Employee employee) throws IOException {
-            gPay += employee.getGPay();
-            fTax += employee.getFTax();
-            sTax += employee.getSTax();
-            ficaTax += employee.getFicaTax();
-            netPay += employee.getNPay();
-        }
-
 }

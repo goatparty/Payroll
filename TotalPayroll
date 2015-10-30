@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+public class TotalPayroll {
+    public static void main(String[] args) {
+        int numLines = 1
+        File file = new File("Employee1.emp");
+        Scanner read = new Scanner(file);
+        while (read.hasNext()) {
+            read.nextLine();
+            numLines++;
+        }
+        System.out.println("Save has " + numLines ". Type reset to clear file or anything else to total");
+
+    }
+}
