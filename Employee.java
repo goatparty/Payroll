@@ -65,6 +65,6 @@ public class Employee {
     }
 
     public void output() {
-        //TODO: Output
+        System.out.printf("Employee Number: %d\nGross Pay: $%,.2f\nFederal Tax: $%,.2f\nState Tax: $%,.2f\nFICA Tax: $%,.2f\nNet Pay: $%,.2f\n",getENum(),getGPay(),getFTax(),getSTax(),getFicaTax(),getNPay());
     }
 }

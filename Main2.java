@@ -26,13 +26,6 @@ public class Main {
             counter++;
             payrollFile.outputEmployee(eNum,gPay,fTax,sTax,ficaTax);
             status = payrollUtils.getStatus();
-            employee[counter].output();
         }
-    System.out.print("Enter \"total\" to get total pay statistics or anything else to quit: ");
-    String askTotal = keyboard.nextLine();
-    askTotal = askTotal.toLowerCase();
-    if (askTotal.equals("total")) {
-        TotalPayroll.main();
-    }
     }
 }
